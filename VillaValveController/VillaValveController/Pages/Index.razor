@@ -1,9 +1,51 @@
-﻿@page "/"
+﻿@using System.Timers;
+@page "/"
+@using VillaValveController.Data;
 
-<PageTitle>Index</PageTitle>
+<div class="d-flex justify-content-center">
+@foreach(var valve in Valves)
+{
+        <div class="card mx-4" style="width: 18rem; ">
+            <div class="card-body">
+                <h5 class="card-title">Phase @(index++) : @valve.Id</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">V: @valve.Voltage, M: @valve.MotorStatus</h6>
+                <p class="card-text">T1: @valve.T1</p>
+                <p class="card-text">T2: @valve.T2</p>
+                <p class="card-text">T3: @valve.T3</p>
+                <p class="card-text">T4: @valve.T4</p>
+                <p class="card-text">T5: @valve.T5</p>
+                <p class="card-text">T6: @valve.T6</p>
+                <p class="card-text">T7: @valve.T7</p>
+                <p class="card-text">T8: @valve.T8</p>
+            </div>
+        </div>
+}
+</div>
+@code {
+    int index = 1;
+    List<ValveDetail> Valves = new();
+    protected override async Task OnInitializedAsync()
+    {
+        index = 1;
+        Timer timer = new Timer(5000);
+        timer.Elapsed += async (x, y) =>
+        {
+            foreach (var key in Store.Valves.Keys)
+            {
+                var valve = Store.Valves[key];
 
-<h1>Hello, world!</h1>
+                var valveMap = Valves.LastOrDefault(x => x.Id == key);
+                if (valveMap!=null)
+                {
+                    Valves.Remove(valveMap);
+                }
+                valveMap = valve.LastOrDefault();
+                Valves.Add(valveMap);
+                Valves = Valves.OrderBy(x => x.Id).ToList();
+                await InvokeAsync(StateHasChanged);
+            }
+        };
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+        timer.Start();
+    }
+}

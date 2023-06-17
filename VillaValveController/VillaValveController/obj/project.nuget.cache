@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i2JIPrI+8u3OJF20XXQZHU5oo0WBhpvlYgyJKM8/t4R1KrTaOWhzPpnTw6eabGtl8AB/gsgY5w+y6lh5pKQhHw==",
+  "dgSpecHash": "7SkAAV1Gm2UOcfUsc4IdkX3GEUykIwgnCyKG3Gs+1hAjbh9yFooui8rJr0aF0E9Ny1vSzZOb4WzHi0AHJMJroA==",
   "success": true,
-  "projectFilePath": "D:\\Workspace\\VillaValveController\\VillaValveController\\VillaValveController.csproj",
+  "projectFilePath": "D:\\Workspace\\valvemonitor\\VillaValveController\\VillaValveController\\VillaValveController.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

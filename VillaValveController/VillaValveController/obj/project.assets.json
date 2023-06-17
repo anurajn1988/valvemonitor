@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\VillaValveController\\VillaValveController\\VillaValveController.csproj",
+      "projectUniqueName": "D:\\Workspace\\valvemonitor\\VillaValveController\\VillaValveController\\VillaValveController.csproj",
       "projectName": "VillaValveController",
-      "projectPath": "D:\\Workspace\\VillaValveController\\VillaValveController\\VillaValveController.csproj",
+      "projectPath": "D:\\Workspace\\valvemonitor\\VillaValveController\\VillaValveController\\VillaValveController.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\VillaValveController\\VillaValveController\\obj\\",
+      "outputPath": "D:\\Workspace\\valvemonitor\\VillaValveController\\VillaValveController\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
