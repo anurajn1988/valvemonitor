@@ -26,10 +26,10 @@
     List<ValveDetail> Valves = new();
     protected override async Task OnInitializedAsync()
     {
-        index = 1;
         Timer timer = new Timer(5000);
         timer.Elapsed += async (x, y) =>
         {
+            index = 1;
             foreach (var key in Store.Valves.Keys)
             {
                 var valve = Store.Valves[key];
